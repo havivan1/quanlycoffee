@@ -15,17 +15,20 @@ import com.example.miniproject.dao.GioHangDAO;
 import com.example.miniproject.model.SanPham;
 import java.util.List;
 
+import javax.naming.Context;
+
 public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GioHangViewHolder> {
     private Context context;
     private List<SanPham> sanPhamList;
     private GioHangDAO gioHangDAO;
 
-    
+
     public GioHangAdapter(Context context, List<SanPham> sanPhamList) {
         this.context = context;
         this.sanPhamList = sanPhamList;
         this.gioHangDAO = new GioHangDAO(context);
     }
+
 
     @NonNull
     @Override
@@ -55,7 +58,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GioHangV
         // Xử lý sự kiện tăng số lượng
         holder.tangSL.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(iew v) {
                 gioHangDAO.tangSoLuongSanPham(sanPham.getMaSanPham());
                 sanPham.setSoLuong(sanPham.getSoLuong() + 1);
                 holder.soLuong.setText(String.format("Số lượng: %d", sanPham.getSoLuong()));
