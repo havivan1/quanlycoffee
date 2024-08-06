@@ -20,6 +20,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GioHangV
     private List<SanPham> sanPhamList;
     private GioHangDAO gioHangDAO;
 
+    
     public GioHangAdapter(Context context, List<SanPham> sanPhamList) {
         this.context = context;
         this.sanPhamList = sanPhamList;
