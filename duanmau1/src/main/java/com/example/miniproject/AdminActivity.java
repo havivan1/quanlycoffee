@@ -9,14 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class AdminActivity extends AppCompatActivity {
-    edtHoTen = findViewById(R.id.edtHoTen);
-    edtTenNguoiDung = findViewById(R.id.edtTenNguoiDung);
-    edtMatKhau = findViewById(R.id.edtMatKhau);
-    edtEmail = findViewById(R.id.edtEmail);
-    edtSoDienThoai = findViewById(R.id.edtSoDienThoai);
-    edtDiaChi = findViewById(R.id.edtDiaChi);
-    btnDangKy = findViewById(R.id.btnDangKy);
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
