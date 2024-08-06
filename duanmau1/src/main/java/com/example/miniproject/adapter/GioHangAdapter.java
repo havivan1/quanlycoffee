@@ -61,7 +61,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GioHangV
             public void onClick(View v) {
                 gioHangDAO.tangSoLuongSanPham(sanPham.getMaSanPham());
                 sanPham.setSoLuong(sanPham.getSoLuong() + 1);
-                holder.soLuong.etText(String.format("Số lượng: %d", sanPham.getSoLuong()));
+                holder.soLuong.setText(String.format("Số lượng: %d", sanPham.getSoLuong()));
             }
         });
 
