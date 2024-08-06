@@ -34,7 +34,14 @@ public class GioHangActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.RecycleGioHang);
         toolbar = findViewById(R.id.toolbar);
 
-      
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_dang_nhap);
+        edtTenDangNhap = findViewById(R.id.edtTenTaiKhoan);
+        edtMatKhau = findViewById(R.id.edtMatKhau);
+        btnDangNhap = findViewById(R.id.btnDangNhap);
+        txtDangKy = findViewById(R.id.txtDangKy);
+        txtQuenMK = findViewById(R.id.txtQuenMK);
 
         btnThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
