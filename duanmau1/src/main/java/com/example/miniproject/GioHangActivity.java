@@ -60,4 +60,11 @@ public class GioHangActivity extends AppCompatActivity {
         recyclerView.setAdapter(gioHangAdapter);
     }
 
-    
+    protected void onResume() {
+        super.onResume();
+        // Làm mới danh sách giỏ hàng
+        gioHangList.clear();
+        gioHangList.addAll(gioHangDAO.laySanPhamGioHang());
+        gioHangAdapter.notifyDataSetChanged();
+    }
+}
