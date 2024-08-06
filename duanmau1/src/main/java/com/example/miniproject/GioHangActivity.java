@@ -19,7 +19,12 @@ import com.example.miniproject.model.TaiKhoan;
 import java.util.List;
 
 public class GioHangActivity extends AppCompatActivity {
-  
+    private RecyclerView recyclerView;
+    private GioHangAdapter gioHangAdapter;
+    private List<SanPham> gioHangList;
+    private GioHangDAO gioHangDAO;
+    private Button btnThanhToan;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +34,14 @@ public class GioHangActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.RecycleGioHang);
         toolbar = findViewById(R.id.toolbar);
 
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Giỏ Hàng");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Intent intent = getIntent();
-        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO(this);
-        int userID = intent.getIntExtra("USER_ID", -1);
-        TaiKhoan user = taiKhoanDAO.layThongTinTaiKhoan(userID);
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_dang_nhap);
+        edtTenDangNhap = findViewById(R.id.edtTenTaiKhoan);
+        edtMatKhau = findViewById(R.id.edtMatKhau);
+        btnDangNhap = findViewById(R.id.btnDangNhap);
+        txtDangKy = findViewById(R.id.txtDangKy);
+        txtQuenMK = findViewById(R.id.txtQuenMK);
 
         btnThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
