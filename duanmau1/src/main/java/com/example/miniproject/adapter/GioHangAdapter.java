@@ -58,7 +58,7 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GioHangV
         // Xử lý sự kiện tăng số lượng
         holder.tangSL.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(iew v) {
+            public void onClick(View v) {
                 gioHangDAO.tangSoLuongSanPham(sanPham.getMaSanPham());
                 sanPham.setSoLuong(sanPham.getSoLuong() + 1);
                 holder.soLuong.setText(String.format("Số lượng: %d", sanPham.getSoLuong()));
