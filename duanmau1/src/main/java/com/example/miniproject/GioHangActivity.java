@@ -19,13 +19,7 @@ import com.example.miniproject.model.TaiKhoan;
 import java.util.List;
 
 public class GioHangActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private GioHangAdapter gioHangAdapter;
-    private List<SanPham> gioHangList;
-    private GioHangDAO gioHangDAO;
-    private Button btnThanhToan;
-    private Toolbar toolbar;
-
+  
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
